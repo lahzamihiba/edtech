@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EdTech, une plateforme pour apprendre le développement web à son rythme.">
+    <title>EdTech — Apprends. Pratique. Progresse.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- Menu latéral -->
+        <aside class="sidebar" id="sidebar">
+            <a href="#accueil" class="logo">
+                <span class="logo-icon">ET</span>
+                <span>Ed<span class="logo-light">Tech</span></span>
+            </a>
+
+            <p class="menu-label">ESPACE APPRENANT</p>
+
+            <nav class="navigation" aria-label="Navigation principale">
+                <a href="#accueil" class="nav-link active">
+                    <span>⌂</span> Accueil
+                </a>
+                <a href="#mes-cours" class="nav-link">
+                    <span>▤</span> Mes cours
+                </a>
+                <a href="#progression" class="nav-link">
+                    <span>◷</span> Ma progression
+                </a>
+                <a href="#detail-cours" class="nav-link">
+                    <span>▣</span> Fiche de cours
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-note">
+                    <span class="note-icon">✦</span>
+                    <h3>Continue à apprendre !</h3>
+                    <p>Chaque leçon te rapproche de ton objectif.</p>
+                </div>
+                <p class="sidebar-footer">© 2026 EdTech</p>
+            </div>
+        </aside>
+
+        <!-- Zone principale -->
+        <main class="main-content" id="accueil">
+
+            <header class="topbar">
+                <button class="icon-button burger" id="burger"
+                        aria-label="Ouvrir le menu" aria-expanded="false"
+                        aria-controls="sidebar">
+                    ☰
+                </button>
+
+                <label class="search-box">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search" id="search"
+                           placeholder="Rechercher un cours..."
+                           aria-label="Rechercher un cours">
+                    <kbd>⌘ K</kbd>
+                </label>
+
+                <div class="profile">
+                    <div class="avatar">É</div>
+                    <div class="profile-text">
+                        <strong>Mon espace</strong>
+                        <span>Apprenante</span>
+                    </div>
+                    <span class="profile-arrow">⌄</span>
+                </div>
+            </header>
+
+            <div class="page-content">
+
+                <!-- Hero -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <span class="eyebrow">
+                            <span class="status-dot"></span>
+                            TON ESPACE D'APPRENTISSAGE
+                        </span>
+
+                        <h1>Apprends aujourd'hui,<br>
+                            <span>construis demain.</span>
+                        </h1>
+
+                        <p>
+                            Développe tes compétences web à ton rythme.
+                            Apprends les bases, pratique et transforme
+                            tes idées en projets concrets.
+                        </p>
+
+                        <a href="#mes-cours" class="button button-light">
+                            Explorer les cours <span>→</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-art" aria-hidden="true">
+                        <div class="art-orbit orbit-one"></div>
+                        <div class="art-orbit orbit-two"></div>
+                        <div class="code-window">
+                            <div class="window-dots">
+                                <i></i><i></i><i></i>
+                            </div>
+                            <div class="code-lines">
+                                <span><b>01</b> &lt;html&gt;</span>
+                                <span><b>02</b> &nbsp; &lt;body&gt;</span>
+                                <span class="code-highlight"><b>03</b> &nbsp;&nbsp;Hello, world!</span>
+                                <span><b>04</b> &nbsp; &lt;/body&gt;</span>
+                                <span><b>05</b> &lt;/html&gt;</span>
+                            </div>
+                        </div>
+                        <span class="floating-tag tag-html">HTML</span>
+                        <span class="floating-tag tag-css">CSS</span>
+                        <span class="floating-tag tag-js">JS</span>
+                        <span class="floating-star">✳</span>
+                    </div>
+                </section>
+
+                <!-- Statistiques -->
+                <section class="stats-grid" aria-label="Mes statistiques">
+                    <article class="stat-card">
+                        <div class="stat-icon purple">▤</div>
+                        <div>
+                            <p class="stat-label">Cours disponibles</p>
+                            <strong class="stat-number" id="total-courses">4</strong>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon green">✓</div>
+                        <div>
+                            <p class="stat-label">Cours terminés</p>
+                            <strong class="stat-number" id="completed-count">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="stat-card" id="progression">
+                        <div class="stat-icon orange">↗</div>
+                        <div>
+                            <p class="stat-label">Progression globale</p>
+                            <strong class="stat-number" id="global-percent">0%</strong>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Catalogue -->
+                <section class="courses-section" id="mes-cours">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-kicker">TON PARCOURS</span>
+                            <h2>Explore les cours</h2>
+                            <p>Choisis une compétence et commence à progresser.</p>
+                        </div>
+
+                        <span class="course-count" id="course-count">04 cours</span>
+                    </div>
+
+                    <div class="filter-row" aria-label="Filtrer les cours">
+                        <button class="filter-button selected" data-filter="all">Tous les cours</button>
+                        <button class="filter-button" data-filter="Débutant">Débutant</button>
+                        <button class="filter-button" data-filter="Intermédiaire">Intermédiaire</button>
+                    </div>
+
+                    <div class="courses-grid" id="courses-grid">
+
+                        <article class="course-card" data-level="Débutant">
+                            <div class="course-cover cover-html">
+                                <span class="cover-symbol">&lt;/&gt;</span>
+                                <span class="cover-badge">ESSENTIEL</span>
+                                <span class="cover-decoration">HTML</span>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-meta">
+                                    <span class="level level-beginner">Débutant</span>
+                                    <span>◷ 2 h 30</span>
+                                </div>
+                                <h3>HTML5 — Les fondamentaux</h3>
+                                <p>Structure tes pages web avec les balises HTML.</p>
+                                <div class="mini-progress">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" data-progress="0"></div>
+                                    </div>
+                                    <span class="progress-label">0%</span>
+                                </div>
+                                <button class="button button-primary course-open"
+                                        data-course="html">Découvrir le cours →</button>
+                            </div>
+                        </article>
+
+                        <article class="course-card" data-level="Débutant">
+                            <div class="course-cover cover-css">
+                                <span class="cover-symbol">✳</span>
+                                <span class="cover-badge">DESIGN</span>
+                                <span class="cover-decoration">CSS</span>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-meta">
+                                    <span class="level level-beginner">Débutant</span>
+                                    <span>◷ 3 h 15</span>
+                                </div>
+                                <h3>CSS3 — Le design web</h3>
+                                <p>Crée des interfaces élégantes et responsives.</p>
+                                <div class="mini-progress">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" data-progress="0"></div>
+                                    </div>
+                                    <span class="progress-label">0%</span>
+                                </div>
+                                <button class="button button-primary course-open"
+                                        data-course="css">Découvrir le cours →</button>
+                            </div>
+                        </article>
+
+                        <article class="course-card" data-level="Intermédiaire">
+                            <div class="course-cover cover-js">
+                                <span class="cover-symbol">JS</span>
+                                <span class="cover-badge">LOGIQUE</span>
+                                <span class="cover-decoration">CODE</span>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-meta">
+                                    <span class="level level-intermediate">Intermédiaire</span>
+                                    <span>◷ 4 h 20</span>
+                                </div>
+                                <h3>JavaScript — L'interactivité</h3>
+                                <p>Ajoute des interactions et de la logique à tes pages.</p>
+                                <div class="mini-progress">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" data-progress="0"></div>
+                                    </div>
+                                    <span class="progress-label">0%</span>
+                                </div>
+                                <button class="button button-primary course-open"
+                                        data-course="js">Découvrir le cours →</button>
+                            </div>
+                        </article>
+
+                        <article class="course-card" data-level="Intermédiaire">
+                            <div class="course-cover cover-react">
+                                <span class="cover-symbol">⚛</span>
+                                <span class="cover-badge">FRAMEWORK</span>
+                                <span class="cover-decoration">REACT</span>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-meta">
+                                    <span class="level level-intermediate">Intermédiaire</span>
+                                    <span>◷ 5 h 45</span>
+                                </div>
+                                <h3>React — Les premiers pas</h3>
+                                <p>Découvre les composants et les interfaces dynamiques.</p>
+                                <div class="mini-progress">
+                                    <div class="progress-track">
+                                        <div class="progress-fill" data-progress="0"></div>
+                                    </div>
+                                    <span class="progress-label">0%</span>
+                                </div>
+                                <button class="button button-primary course-open"
+                                        data-course="react">Découvrir le cours →</button>
+                            </div>
+                        </article>
+
+                        <p class="empty-state" id="empty-state" hidden>
+                            Aucun cours ne correspond à ta recherche.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Fiche de cours dynamique -->
+                <section class="detail-section" id="detail-cours">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-kicker">APPRENTISSAGE</span>
+                            <h2>Ta prochaine leçon</h2>
+                            <p>Consulte le programme et valide les leçons terminées.</p>
+                        </div>
+                    </div>
+
+                    <article class="lesson-panel">
+                        <div class="lesson-heading">
+                            <div class="lesson-icon" id="lesson-icon">&lt;/&gt;</div>
+                            <div class="lesson-title">
+                                <span class="level level-beginner" id="lesson-level">Débutant</span>
+                                <h3 id="lesson-title">HTML5 — Les fondamentaux</h3>
+                                <p id="lesson-description">
+                                    Découvre la structure d'une page web et crée ton premier document HTML.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-progress-row">
+                            <span>Progression du cours</span>
+                            <strong id="lesson-percent">0%</strong>
+                        </div>
+                        <div class="progress-track large">
+                            <div class="progress-fill" id="lesson-progress"></div>
+                        </div>
+
+                        <h4 class="curriculum-title">Programme du cours</h4>
+                        <div class="lesson-list" id="lesson-list">
+                            <!-- Rempli par JavaScript -->
+                        </div>
+
+                        <div class="lesson-actions">
+                            <button class="button button-outline" id="reset-course">
+                                Recommencer
+                            </button>
+                            <button class="button button-primary" id="complete-course">
+                                Valider la leçon ✓
+                            </button>
+                        </div>
+                        <p class="action-message" id="action-message" role="status" aria-live="polite"></p>
+                    </article>
+                </section>
+
+                <footer class="page-footer">
+                    <p>EdTech · Apprends à ton rythme.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
