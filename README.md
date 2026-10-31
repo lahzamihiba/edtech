@@ -1,6 +1,6 @@
 # EdTech — Plateforme de cours en ligne (mini LMS)
 
-Mini-projet JavaScript FIA2 — ISSAT Sousse · Sujet 8 · Binôme : Isra Khlifi & Hiba Hzami
+Mini-projet JavaScript FIA2 — ISSAT Sousse Binôme : Isra Khlifi & Hiba Hzami
 
 ## Lancer le projet
 Ouvrir `index.html` (ou, de préférence, utiliser **Live Server** dans VS Code).
@@ -48,10 +48,3 @@ Dans l'administration, une leçon peut avoir un fichier vidéo (max 300 Mo). Il 
 
 ## Qualité
 Responsive (mobile / tablette / desktop), aucun `innerHTML` (création DOM sécurisée), aucune erreur console.
-
-## Avant de rendre
-- [ ] Valider HTML/CSS sur le validateur W3C
-- [ ] Relever les scores Lighthouse (captures dans le rapport)
-- [ ] Tester mobile, tablette, desktop et au clavier
-- [ ] Commits réguliers des **deux** étudiants sur GitHub
-- [ ] Rapport rédigé avec le modèle fourni + démonstration préparée
